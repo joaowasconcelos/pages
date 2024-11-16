@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Home Page *******</title>
+</head>
+
+
+<body>
+    <header>
+        <div id="logo">
+            <img src="logo" alt="logo">
+        </div>
+
+        <nav>
+            <P><a href="#inicio">Início</a></p>
+            <P><a href="#sobre">Sobre</a></p>
+            <P><a href="#produtos">Produtos</a></p>
+            <P><a href="#contatos">Contatos</a></p>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <h2>Início</h2>
+            <p>Este é o conteúdo principal da página.</p>
+        </section>
+
+        <section id="sobre">
+            <h2>Sobre</h2>
+            <article>
+                <h3>Nossa História</h3>
+                <p>Texto sobre a história da empresa.</p>
+            </article>
+        </section>
+
+        <section id="produtos">
+            <h2>Confira nossos produtos</h2>
+            <div class="carrossel">
+                <div class="carrossel-container">
+                    <img src="./imagens/imagem 1.jpg" alt="Imagem 1">
+                    <img src="./imagens/imagem 2.jpg" alt="Imagem 2">
+                    <img src="./imagens/imagem 3.jpg" alt="Imagem 3">
+                </div>
+            
+                <button class="prev" onclick="mover(-1)">&#10094;</button>
+                <button class="next" onclick="mover(1)">&#10095;</button>
+            </div>
+        </section>
+
+        <section id="contatos">
+            <h2>contatos</h2>
+            <article>
+                <h3>Confira nossos contatos</h3>
+            </article>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Minha Empresa</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
