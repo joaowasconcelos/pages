@@ -12,22 +12,75 @@
 <body>
     <header>
         <div id="logo">
-            <img src="logo" alt="logo">
+            <img src="logo" alt="Logo da empresa">
         </div>
-
         <nav>
-            <P><a href="#inicio">Início</a></p>
-            <P><a href="#sobre">Sobre</a></p>
-            <P><a href="#produtos">Produtos</a></p>
-            <P><a href="#contatos">Contatos</a></p>
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#produtos">Produtos</a>
+            <a href="#contatos">Contatos</a>
         </nav>
     </header>
 
+
     <main>
-        <section id="inicio">
+    
+
+        <section id="produtos">
+            <div class="escolha-produto">
+                <h2>Confira nossos produtos</h2>
+                <button onclick="mostrarDescricao('natal')">Natal</button>
+                <button onclick="mostrarDescricao('pascoa')">Páscoa</button>
+                <button onclick="mostrarDescricao('outro')">Outro Produto</button>
+                <button onclick="mostrarDescricao('mais')">Mais Produtos</button>
+            </div>
+
+            <div class="descricao" id="descricao-natal" style="display: none;">
+                <div class="descricao-texto">
+                    <p>Feliz Natal!!<br>Explore nossa seleção especial de produtos de Natal, cuidadosamente criados para
+                        tornar suas celebrações ainda mais mágicas. Descubra itens exclusivos que trazem o encanto e a
+                        alegria da época festiva, perfeitos para presentear quem você ama e transformar qualquer
+                        ambiente em um cenário de sonhos. Deixe seu Natal mais especial com nossas criações únicas!</p>
+                </div>
+
+                <!-- Carrossel de Natal -->
+                <div class="carrossel">
+                    <div class="carrossel-container">
+                        <img src="./imagens/imagem 1.jpg" alt="Produto 1">
+                        <img src="./imagens/imagem 2.jpg" alt="Produto 2">
+                        <img src="./imagens/imagem 3.jpg" alt="Produto 3">
+                    </div>
+                    <button class="prev" onclick="moverCarrossel('natal', -1)">&#10094;</button>
+                    <button class="next" onclick="moverCarrossel('natal', 1)">&#10095;</button>
+                </div>
+            </div>
+
+            <div class="descricao" id="descricao-pascoa" style="display: none;">
+                <div class="descricao-texto">
+                    <p>Explore nossa coleção exclusiva de produtos de Páscoa, feita para transformar sua celebração em
+                        um momento inesquecível. Desde deliciosos chocolates até itens decorativos encantadores, temos
+                        tudo o que você precisa para tornar essa data ainda mais doce e especial. Surpreenda quem você
+                        ama com presentes feitos com carinho e dê um toque único à sua casa com nossas criações
+                        especiais. Não deixe a magia da Páscoa passar sem ser celebrada em grande estilo!</p>
+                </div>
+
+                <!-- Carrossel de Páscoa -->
+                <div class="carrossel">
+                    <div class="carrossel-container">
+                        <img src="./imagens/pascoa1.jpg" alt="Produto 1">
+                        <img src="./imagens/pascoa2.jpg" alt="Produto 2">
+                        <img src="./imagens/pascoa3.jpg" alt="Produto 3">
+                    </div>
+                    <button class="prev" onclick="moverCarrossel('pascoa', -1)">&#10094;</button>
+                    <button class="next" onclick="moverCarrossel('pascoa', 1)">&#10095;</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- <section id="inicio">
             <h2>Início</h2>
             <p>Este é o conteúdo principal da página.</p>
-        </section>
+        </section> -->
 
         <section id="sobre">
             <h2>Sobre</h2>
@@ -37,19 +90,8 @@
             </article>
         </section>
 
-        <section id="produtos">
-            <h2>Confira nossos produtos</h2>
-            <div class="carrossel">
-                <div class="carrossel-container">
-                    <img src="./imagens/imagem 1.jpg" alt="Imagem 1">
-                    <img src="./imagens/imagem 2.jpg" alt="Imagem 2">
-                    <img src="./imagens/imagem 3.jpg" alt="Imagem 3">
-                </div>
-            
-                <button class="prev" onclick="mover(-1)">&#10094;</button>
-                <button class="next" onclick="mover(1)">&#10095;</button>
-            </div>
-        </section>
+
+
 
         <section id="contatos">
             <h2>contatos</h2>

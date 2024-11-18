@@ -6,14 +6,14 @@
 
 body {
     height: 100%;
-    min-height: 100vh; 
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow: auto; 
+    overflow: auto;
     gap: 20px;
 }
 
-header{
+header {
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -23,11 +23,11 @@ header{
 
 }
 
-header nav{
+header nav {
     display: flex;
-    justify-content: space-around; 
-    align-items: center; 
-    background-color: rgb(35, 180, 190); 
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(35, 180, 190);
     width: 100%;
 }
 
@@ -37,58 +37,129 @@ main {
     align-items: center;
     flex-direction: column;
     gap: 20px;
-    flex: 1; 
+    flex: 1;
     width: 100%;
 }
 
-#logo{
+#logo {
     min-width: 100px;
     min-height: 70px;
 }
 
-#inicio{
+nav a {
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: darkblue;
+}
+
+
+#inicio {
     width: 95%;
     min-height: 150px;
     background-color: rgb(112, 95, 95);
 }
 
-#sobre{
+#sobre {
     width: 95%;
     min-height: 550px;
     background-color: rgb(143, 23, 23);
-
 }
 
-#produtos{
+#produtos {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
     width: 95%;
-    min-height: 150px;
-    background-color: rgb(149, 53, 168);
+    margin: 40px auto; /* Centraliza a seção */
+    padding: 20px;
+    background-color: rgb(240, 240, 240);
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    gap: 20px;
 }
+
+.escolha-produto {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    gap: 15px;
+    padding: 15px;
+    background-color: #ff6f61; /* Cor vibrante para chamar atenção */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.escolha-produto h2 {
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.escolha-produto button {
+    padding: 12px;
+    font-size: 18px;
+    background-color: #fff;
+    border: 2px solid #ff6f61;
+    border-radius: 5px;
+    color: #ff6f61;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    width: 400px;
+    height: 50px;
+}
+
+
+.escolha-produto button:hover {
+    background-color: #ca594f;
+    color: white;
+}
+
+
+.descricao-texto {
+    font-size: 18px;
+    font-weight: 400;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+.descricao {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding: 20px; 
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
 
 .carrossel {
     position: relative;
-    width: 100%; 
-    max-width: 40%;  
-    overflow: hidden; 
+    overflow: hidden;
+    width: 100%;
+    margin-top: 20px;
 }
 
 .carrossel-container {
-    display: flex;            
-    transition: transform 0.5s ease-in-out; 
-    width: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
 .carrossel-container img {
-    width: 100%;             
-    flex-shrink: 0;           
+    width: 100%;
+    flex-shrink: 0;
     object-fit: cover;
 }
 
-button {
+.carrossel button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -101,23 +172,76 @@ button {
     z-index: 100;
 }
 
-button.prev {
+.carrossel button.prev {
     left: 10px;
 }
 
-button.next {
+.carrossel button.next {
     right: 10px;
 }
 
-#contatos{
+
+
+#contatos {
     width: 95%;
-    min-height: 150px;
-    background-color: rgb(57, 168, 53);
+    min-height: 250px; 
+    background-color: rgb(240, 240, 240);
+    border-radius: 10px;
+    padding: 20px; 
+    color: rgb(0, 0, 0); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
 }
+
+#contatos h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+#contatos h3 {
+    font-size: 1.25rem; 
+    margin-top: 10px; 
+    font-weight: 500;
+}
+
+#contatos article {
+    font-size: 1rem; /* Ajuste do tamanho da fonte */
+    line-height: 1.6; /* Melhora a legibilidade */
+    margin-top: 20px; /* Espaçamento acima do conteúdo */
+}
+
 
 footer {
     background-color: #f1f1f1;
     text-align: center;
     padding: 10px;
-    width: 100%; 
+    width: 100%;
+}
+
+
+
+@media (max-width: 768px) {
+    #produtos {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .escolha-produto, .descricao, .carrossel {
+        width: 100%;
+        max-width: none;
+    }
+
+    .descricao {
+        display: block;
+    }
+
+    .carrossel button {
+        font-size: 25px;
+        padding: 12px;
+    }
 }
